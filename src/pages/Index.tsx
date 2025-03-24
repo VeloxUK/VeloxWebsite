@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
-import BrandsSection from '@/components/BrandsSection';
-import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -38,9 +36,9 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>LuxWatch - Premium Luxury Watch Rental Marketplace</title>
-        <meta name="description" content="Transform your idle luxury watches into revenue-generating assets. Join the premier marketplace connecting luxury watch dealers with discerning clients." />
-        <meta name="keywords" content="luxury watch rental, watch marketplace, watch dealers, timepieces rental" />
+        <title>LuxWatch - Join Our Exclusive Dealer Waitlist</title>
+        <meta name="description" content="Join our waitlist for luxury watch dealers. Monetize your watch inventory and connect with discerning clients on our premium rental marketplace." />
+        <meta name="keywords" content="luxury watch rental, watch marketplace, dealer waitlist, timepieces rental" />
         <link rel="canonical" href="https://luxwatch.com/" />
       </Helmet>
       <div className="min-h-screen bg-luxury-black text-white overflow-x-hidden">
@@ -48,8 +46,6 @@ const Index = () => {
         <main>
           <HeroSection />
           <FeaturesSection />
-          <BrandsSection />
-          <CallToAction />
         </main>
         <Footer />
       </div>

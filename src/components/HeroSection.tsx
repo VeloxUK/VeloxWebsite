@@ -1,10 +1,46 @@
 
-import React, { useEffect, useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ArrowRight, Check } from 'lucide-react';
 import WatchModel from './WatchModel';
 
 const HeroSection = () => {
   const watchRef = useRef<HTMLDivElement>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    country: '',
+    city: '',
+  });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        country: '',
+        city: '',
+      });
+      
+      // Reset success message after a while
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    }, 1500);
+  };
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -33,7 +69,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" aria-label="Hero section">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" aria-label="Hero section" id="register">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-luxury-black z-0">
         <div className="absolute top-0 left-0 right-0 h-1/4 bg-gradient-to-b from-luxury-gold/5 to-transparent"></div>
@@ -42,39 +78,129 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-luxury-gold/10 rounded-full blur-[100px]"></div>
       </div>
 
-      <div className="container mx-auto px-6 pt-40 pb-20 relative z-10">
+      <div className="container mx-auto px-6 pt-24 pb-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in-right">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-4">
-                <span className="gold-shimmer">Elevate</span> Your Inventory's Potential
+                <span className="gold-shimmer">Join</span> Our Exclusive Dealer Waitlist
               </h1>
               <p className="text-lg md:text-xl text-luxury-cream/80 max-w-xl">
-                Transform your exclusive timepieces into a revenue stream. Join the premier 
-                marketplace for luxury watch rentals.
+                Be among the first luxury watch dealers to access our premium rental marketplace and start monetizing your inventory.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="#register" 
-                className="bg-luxury-gold hover:bg-luxury-lightgold text-luxury-black px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center group"
-                aria-label="Register as a dealer"
-              >
-                Register as Dealer
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-              </a>
-              <a 
-                href="#learn-more" 
-                className="border border-luxury-gold/30 hover:border-luxury-gold text-luxury-white px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center"
-                aria-label="Learn more about our services"
-              >
-                Learn More
-              </a>
+            {/* Form Area (Featured on Hero) */}
+            <div className="bg-luxury-darkgray border border-luxury-gold/10 rounded-lg p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-bold mb-4">Join Our Waitlist</h3>
+              
+              {isSubmitted ? (
+                <div className="text-center py-6">
+                  <div className="w-12 h-12 rounded-full bg-luxury-gold/20 flex items-center justify-center mx-auto mb-3">
+                    <Check className="w-6 h-6 text-luxury-gold" />
+                  </div>
+                  <h4 className="text-lg font-medium mb-2">Registration Successful!</h4>
+                  <p className="text-luxury-cream/70">
+                    Thank you for your interest. We'll contact you soon.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-luxury-cream/90 mb-1">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 bg-luxury-black border border-luxury-gold/20 rounded-md focus:outline-none focus:ring-1 focus:ring-luxury-gold/50 text-luxury-white"
+                        placeholder="Enter your name"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-luxury-cream/90 mb-1">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 bg-luxury-black border border-luxury-gold/20 rounded-md focus:outline-none focus:ring-1 focus:ring-luxury-gold/50 text-luxury-white"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="country" className="block text-sm font-medium text-luxury-cream/90 mb-1">
+                        Country
+                      </label>
+                      <input
+                        type="text"
+                        id="country"
+                        name="country"
+                        value={formData.country}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 bg-luxury-black border border-luxury-gold/20 rounded-md focus:outline-none focus:ring-1 focus:ring-luxury-gold/50 text-luxury-white"
+                        placeholder="Your country"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="city" className="block text-sm font-medium text-luxury-cream/90 mb-1">
+                        City
+                      </label>
+                      <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 bg-luxury-black border border-luxury-gold/20 rounded-md focus:outline-none focus:ring-1 focus:ring-luxury-gold/50 text-luxury-white"
+                        placeholder="Your city"
+                      />
+                    </div>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-luxury-gold hover:bg-luxury-lightgold text-luxury-black px-6 py-3 rounded-md font-medium transition-colors flex items-center justify-center group"
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center">
+                        Processing
+                        <span className="ml-2 flex">
+                          <span className="animate-pulse">.</span>
+                          <span className="animate-pulse" style={{ animationDelay: "0.2s" }}>.</span>
+                          <span className="animate-pulse" style={{ animationDelay: "0.4s" }}>.</span>
+                        </span>
+                      </span>
+                    ) : (
+                      <span className="flex items-center">
+                        Join Waitlist
+                        <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                      </span>
+                    )}
+                  </button>
+                  
+                  <p className="text-xs text-luxury-cream/50 text-center mt-1">
+                    By joining, you agree to our Terms of Service and Privacy Policy.
+                  </p>
+                </form>
+              )}
             </div>
 
-            <div className="flex items-center space-x-6 pt-4">
+            <div className="flex items-center space-x-6">
               <div className="flex -space-x-2">
                 <div className="w-10 h-10 rounded-full bg-luxury-gold/10 flex items-center justify-center text-xs border border-luxury-gold/20">+5K</div>
                 <div className="w-10 h-10 rounded-full bg-luxury-gold/10 flex items-center justify-center text-xs border border-luxury-gold/20">+2K</div>
@@ -109,14 +235,6 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <div className="w-6 h-10 border-2 border-luxury-gold/30 rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-luxury-gold rounded-full animate-[fadeInDown_1.5s_infinite]"></div>
-          </div>
-          <p className="text-luxury-gold/70 text-sm mt-2">Scroll Down</p>
         </div>
       </div>
     </section>
