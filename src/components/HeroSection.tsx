@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
 import WatchModel from './WatchModel';
@@ -200,14 +199,9 @@ const HeroSection = () => {
               )}
             </div>
 
-            <div className="flex items-center space-x-6">
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full bg-luxury-gold/10 flex items-center justify-center text-xs border border-luxury-gold/20">+5K</div>
-                <div className="w-10 h-10 rounded-full bg-luxury-gold/10 flex items-center justify-center text-xs border border-luxury-gold/20">+2K</div>
-                <div className="w-10 h-10 rounded-full bg-luxury-gold/10 flex items-center justify-center text-xs border border-luxury-gold/20">+8K</div>
-              </div>
+            <div className="mt-4">
               <p className="text-sm text-luxury-cream/70">
-                Join <span className="text-luxury-gold">15,000+</span> luxury dealers already on our platform
+                Join thousands of luxury dealers already in the waiting list.
               </p>
             </div>
           </div>
