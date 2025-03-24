@@ -40,17 +40,6 @@ const WatchDisplay = () => {
       >
         <div className="w-full max-w-md mx-auto">
           <WatchModel />
-          
-          {/* Floating Elements */}
-          <div className="absolute top-10 -right-16 glass p-4 rounded-lg animate-float" style={{animationDelay: "0s"}}>
-            <p className="text-luxury-gold font-medium">Premium Quality</p>
-            <p className="text-sm text-luxury-cream/70">Verified Authenticity</p>
-          </div>
-          
-          <div className="absolute -bottom-10 -left-16 glass p-4 rounded-lg animate-float" style={{animationDelay: "1s"}}>
-            <p className="text-luxury-gold font-medium">Dedicated Insurance</p>
-            <p className="text-sm text-luxury-cream/70">Full Coverage</p>
-          </div>
         </div>
       </div>
     </div>
