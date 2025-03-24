@@ -49,7 +49,7 @@ const FeaturesSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 id="features-heading" className="text-3xl md:text-4xl font-light mb-6">
-            How <span className="gold-shimmer">LuxWatch</span> Works for Dealers
+            How <span className="gold-shimmer">velox</span> Works for Dealers
           </h2>
           <p className="text-luxury-cream/80 text-lg">
             Our platform connects luxury watch owners with verified clients seeking short-term access to premium timepieces.

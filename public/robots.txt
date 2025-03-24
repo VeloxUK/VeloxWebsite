@@ -9,7 +9,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://luxwatch.com/sitemap.xml
+Sitemap: https://velox.com/sitemap.xml
 
 # Specific crawler rules
 User-agent: Googlebot
