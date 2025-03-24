@@ -56,8 +56,8 @@ export default {
         luxury: {
           black: "#121212",
           darkgray: "#1A1A1A",
-          gold: "#D4AF37",
-          lightgold: "#F4D160",
+          gold: "#9F8E6A", // changed from D4AF37 to a softer champagne gold
+          lightgold: "#C5B89F", // changed from F4D160 to a softer champagne
           cream: "#F5F5F0",
           white: "#FFFFFF",
         },
@@ -68,8 +68,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Montserrat", "system-ui", "sans-serif"],
-        serif: ["Playfair Display", "Georgia", "serif"],
+        sans: ["Lato", "system-ui", "sans-serif"], // changed from Montserrat to Lato
+        serif: ["Cormorant Garamond", "Georgia", "serif"], // changed from Playfair Display to Cormorant Garamond
       },
       keyframes: {
         "accordion-down": {
@@ -117,7 +117,7 @@ export default {
       },
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
-        "gold-gradient": "linear-gradient(45deg, #D4AF37 0%, #F4D160 50%, #D4AF37 100%)",
+        "gold-gradient": "linear-gradient(45deg, #9F8E6A 0%, #C5B89F 50%, #9F8E6A 100%)", // updated to softer colors
       },
     },
   },

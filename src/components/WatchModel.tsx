@@ -25,18 +25,18 @@ const WatchModel = () => {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
     
-    const directionalLight = new THREE.DirectionalLight(0xD4AF37, 1);
+    const directionalLight = new THREE.DirectionalLight(0x9F8E6A, 1); // Updated to new gold color
     directionalLight.position.set(5, 5, 5);
     scene.add(directionalLight);
     
-    const pointLight = new THREE.PointLight(0xD4AF37, 1);
+    const pointLight = new THREE.PointLight(0x9F8E6A, 1); // Updated to new gold color
     pointLight.position.set(-5, -5, 5);
     scene.add(pointLight);
     
     // Create watch body
     const watchBodyGeometry = new THREE.CylinderGeometry(2, 2, 0.5, 32);
     const watchBodyMaterial = new THREE.MeshStandardMaterial({
-      color: 0xD4AF37,
+      color: 0x9F8E6A, // Updated to new gold color
       metalness: 0.8,
       roughness: 0.2,
     });
@@ -46,7 +46,7 @@ const WatchModel = () => {
     // Create watch face
     const watchFaceGeometry = new THREE.CircleGeometry(1.8, 32);
     const watchFaceMaterial = new THREE.MeshStandardMaterial({
-      color: 0x000000,
+      color: 0x121212,
       metalness: 0.1,
       roughness: 0.1,
     });
@@ -59,7 +59,7 @@ const WatchModel = () => {
       const angle = (i / 12) * Math.PI * 2;
       const markerGeometry = new THREE.BoxGeometry(0.1, 0.4, 0.05);
       const markerMaterial = new THREE.MeshStandardMaterial({
-        color: 0xD4AF37,
+        color: 0x9F8E6A, // Updated to new gold color
         metalness: 0.8,
         roughness: 0.2,
       });
@@ -76,7 +76,7 @@ const WatchModel = () => {
     // Create hour hand
     const hourHandGeometry = new THREE.BoxGeometry(0.1, 1, 0.05);
     const hourHandMaterial = new THREE.MeshStandardMaterial({
-      color: 0xD4AF37,
+      color: 0x9F8E6A, // Updated to new gold color
       metalness: 0.8,
       roughness: 0.2,
     });
@@ -87,7 +87,7 @@ const WatchModel = () => {
     // Create minute hand
     const minuteHandGeometry = new THREE.BoxGeometry(0.06, 1.4, 0.05);
     const minuteHandMaterial = new THREE.MeshStandardMaterial({
-      color: 0xD4AF37,
+      color: 0x9F8E6A, // Updated to new gold color
       metalness: 0.8,
       roughness: 0.2,
     });
@@ -98,7 +98,7 @@ const WatchModel = () => {
     // Create center cap
     const capGeometry = new THREE.SphereGeometry(0.15, 16, 16);
     const capMaterial = new THREE.MeshStandardMaterial({
-      color: 0xD4AF37,
+      color: 0x9F8E6A, // Updated to new gold color
       metalness: 0.9,
       roughness: 0.1,
     });

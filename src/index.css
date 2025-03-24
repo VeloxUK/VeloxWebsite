@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +16,7 @@
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 47 65% 52%;
+    --primary: 36 22% 52%;
     --primary-foreground: 0 0% 7%;
 
     --secondary: 0 0% 13%;
@@ -25,7 +25,7 @@
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 47 65% 52%;
+    --accent: 36 22% 52%;
     --accent-foreground: 0 0% 7%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 47 65% 52%;
+    --ring: 36 22% 52%;
 
     --radius: 0.5rem;
   }
@@ -47,13 +47,13 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-medium tracking-tight;
+    @apply font-serif font-light tracking-tight;
   }
 
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
@@ -66,12 +66,12 @@
 
   /* Glass Effect */
   .glass {
-    @apply backdrop-blur-xl bg-black/30 border border-white/10;
+    @apply backdrop-blur-xl bg-black/30 border border-white/5;
   }
 
   /* Gold Shimmer Effect */
   .gold-shimmer {
-    background: linear-gradient(90deg, #D4AF37, #F4D160, #D4AF37);
+    background: linear-gradient(90deg, #9F8E6A, #C5B89F, #9F8E6A);
     background-size: 200% auto;
     animation: shimmer 3s linear infinite;
     @apply bg-clip-text text-transparent;
@@ -83,6 +83,6 @@
   }
 
   .elegant-hover:hover {
-    @apply scale-105 shadow-lg shadow-luxury-gold/20;
+    @apply scale-102 shadow-md shadow-luxury-gold/10;
   }
 }
