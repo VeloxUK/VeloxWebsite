@@ -70,8 +70,16 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" aria-label="Hero section" id="register">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-luxury-black z-0">
+      {/* Background Image and Overlay */}
+      <div className="absolute inset-0 z-0">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-luxury-black">
+          <div className="absolute inset-0 opacity-40 bg-gradient-to-b from-luxury-black via-luxury-black/90 to-luxury-black"></div>
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-overlay opacity-75" 
+               style={{ backgroundImage: "url('/lovable-uploads/7cce071e-9b08-4779-a448-26a1ba3b075d.png')" }}></div>
+        </div>
+        
+        {/* Additional Effects */}
         <div className="absolute top-0 left-0 right-0 h-1/4 bg-gradient-to-b from-luxury-gold/5 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-luxury-gold/5 to-transparent"></div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-luxury-gold/10 rounded-full blur-[100px]"></div>
@@ -92,7 +100,7 @@ const HeroSection = () => {
             </div>
 
             {/* Form Area (Featured on Hero) */}
-            <div className="bg-luxury-darkgray border border-luxury-gold/10 rounded-lg p-6 backdrop-blur-sm">
+            <div className="bg-luxury-darkgray/80 backdrop-blur-md border border-luxury-gold/10 rounded-lg p-6">
               <h3 className="text-xl font-bold mb-4">Join Our Waitlist</h3>
               
               {isSubmitted ? (
