@@ -78,8 +78,7 @@ const FeaturesSection = () => {
           </h3>
 
           <div className="relative">
-            {/* Connection Line */}
-            <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-luxury-gold/30 to-transparent hidden md:block" aria-hidden="true"></div>
+            {/* Removed the connection line here */}
 
             {/* Steps */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
