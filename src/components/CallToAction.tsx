@@ -6,15 +6,14 @@ const CallToAction = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
-    watchBrands: '',
-    inventory: '',
+    country: '',
+    city: '',
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -30,9 +29,8 @@ const CallToAction = () => {
       setFormData({
         name: '',
         email: '',
-        company: '',
-        watchBrands: '',
-        inventory: '',
+        country: '',
+        city: '',
       });
       
       // Reset success message after a while
@@ -44,11 +42,8 @@ const CallToAction = () => {
   
   const benefits = [
     "Earn passive income from your watch collection",
-    "Zero listing fees and competitive commission rates",
     "Complete insurance coverage on all rentals",
-    "Verified, high-net-worth clientele only",
-    "Dedicated account manager for your portfolio",
-    "Early access to platform upgrades and features"
+    "Verified, high-net-worth clientele only"
   ];
 
   return (
@@ -67,10 +62,10 @@ const CallToAction = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Join Our <span className="gold-shimmer">Exclusive</span> Network of Luxury Dealers
+                Join Our <span className="gold-shimmer">Exclusive</span> Network
               </h2>
               <p className="text-luxury-cream/80 text-lg">
-                Unlock the untapped potential of your luxury watch inventory. Register today for early access and preferred dealer status.
+                Unlock the untapped potential of your luxury watch inventory.
               </p>
             </div>
 
@@ -87,27 +82,11 @@ const CallToAction = () => {
                 </div>
               ))}
             </div>
-
-            {/* Trust Badges */}
-            <div className="pt-6">
-              <p className="text-sm text-luxury-cream/60 mb-4">Trusted by leading retailers and dealers</p>
-              <div className="flex flex-wrap gap-4">
-                <div className="bg-luxury-darkgray/50 backdrop-blur-sm border border-luxury-gold/10 rounded-lg px-4 py-2">
-                  <span className="text-luxury-gold">⭐</span> Premium Partner
-                </div>
-                <div className="bg-luxury-darkgray/50 backdrop-blur-sm border border-luxury-gold/10 rounded-lg px-4 py-2">
-                  <span className="text-luxury-gold">🔒</span> Secure & Insured
-                </div>
-                <div className="bg-luxury-darkgray/50 backdrop-blur-sm border border-luxury-gold/10 rounded-lg px-4 py-2">
-                  <span className="text-luxury-gold">✓</span> Verified Clients
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Form Side */}
           <div className="bg-luxury-darkgray border border-luxury-gold/10 rounded-lg p-8 md:p-12 backdrop-blur-sm">
-            <h3 className="text-2xl font-bold mb-6">Register Your Interest</h3>
+            <h3 className="text-2xl font-bold mb-6">Join Our Waitlist</h3>
             
             {isSubmitted ? (
               <div className="text-center py-8">
@@ -116,7 +95,7 @@ const CallToAction = () => {
                 </div>
                 <h4 className="text-xl font-medium mb-2">Registration Successful!</h4>
                 <p className="text-luxury-cream/70">
-                  Thank you for your interest. A member of our team will contact you shortly.
+                  Thank you for your interest. We'll contact you soon.
                 </p>
               </div>
             ) : (
@@ -155,52 +134,33 @@ const CallToAction = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-luxury-cream/90 mb-1">
-                      Company/Store Name
+                    <label htmlFor="country" className="block text-sm font-medium text-luxury-cream/90 mb-1">
+                      Country
                     </label>
                     <input
                       type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
+                      id="country"
+                      name="country"
+                      value={formData.country}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-luxury-black border border-luxury-gold/20 rounded-md focus:outline-none focus:ring-2 focus:ring-luxury-gold/50 text-luxury-white"
-                      placeholder="Enter your company name"
+                      placeholder="Your country"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="watchBrands" className="block text-sm font-medium text-luxury-cream/90 mb-1">
-                      Watch Brands You Carry
+                    <label htmlFor="city" className="block text-sm font-medium text-luxury-cream/90 mb-1">
+                      City
                     </label>
                     <input
                       type="text"
-                      id="watchBrands"
-                      name="watchBrands"
-                      value={formData.watchBrands}
+                      id="city"
+                      name="city"
+                      value={formData.city}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-luxury-black border border-luxury-gold/20 rounded-md focus:outline-none focus:ring-2 focus:ring-luxury-gold/50 text-luxury-white"
-                      placeholder="e.g., Rolex, Omega, Patek Philippe"
+                      placeholder="Your city"
                     />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="inventory" className="block text-sm font-medium text-luxury-cream/90 mb-1">
-                      Inventory Size
-                    </label>
-                    <select
-                      id="inventory"
-                      name="inventory"
-                      value={formData.inventory}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-luxury-black border border-luxury-gold/20 rounded-md focus:outline-none focus:ring-2 focus:ring-luxury-gold/50 text-luxury-white"
-                    >
-                      <option value="">Select inventory size</option>
-                      <option value="1-5">1-5 watches</option>
-                      <option value="6-20">6-20 watches</option>
-                      <option value="21-50">21-50 watches</option>
-                      <option value="50+">50+ watches</option>
-                    </select>
                   </div>
                 </div>
                 
@@ -220,14 +180,14 @@ const CallToAction = () => {
                     </span>
                   ) : (
                     <span className="flex items-center">
-                      Register Now
+                      Join Waitlist
                       <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
                     </span>
                   )}
                 </button>
                 
                 <p className="text-xs text-luxury-cream/50 text-center mt-4">
-                  By registering, you agree to our Terms of Service and Privacy Policy.
+                  By joining, you agree to our Terms of Service and Privacy Policy.
                 </p>
               </form>
             )}
