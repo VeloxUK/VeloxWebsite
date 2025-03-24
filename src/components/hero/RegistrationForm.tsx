@@ -25,28 +25,6 @@ const RegistrationForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        country: '',
-        city: '',
-      });
-      
-      // Reset success message after a while
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
-  };
-  
   return (
     <div className="bg-luxury-darkgray/80 backdrop-blur-md border border-luxury-gold/10 rounded-lg p-6">
       <h3 className="text-xl font-bold mb-4">Join Our Waitlist</h3>
@@ -62,7 +40,7 @@ const RegistrationForm = () => {
           </p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form action='https://formspree.io/f/mnnpvyby' method='POST' className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-luxury-cream/90 mb-1">
