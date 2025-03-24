@@ -1,5 +1,6 @@
+
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Users } from 'lucide-react';
 import WatchModel from './WatchModel';
 
 const HeroSection = () => {
@@ -200,8 +201,9 @@ const HeroSection = () => {
             </div>
 
             <div className="mt-4">
-              <p className="text-sm text-luxury-cream/70">
-                Join thousands of luxury dealers already in the waiting list.
+              <p className="text-sm text-luxury-cream/70 flex items-center">
+                <Users size={16} className="text-luxury-gold mr-1.5" />
+                Join <span className="text-luxury-gold font-medium mx-1">1000+</span> luxury dealers already in the waiting list.
               </p>
             </div>
           </div>
