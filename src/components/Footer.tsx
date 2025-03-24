@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <a href="/" className="inline-block mb-6" aria-label="LuxWatch Home">
-              <span className="text-2xl font-serif font-bold gold-shimmer">LuxWatch</span>
+              <span className="text-2xl font-sans font-bold gold-shimmer">LuxWatch</span>
             </a>
             <p className="text-luxury-cream/70 mb-6">
               The premier marketplace for luxury watch rentals, connecting discerning enthusiasts with extraordinary timepieces.

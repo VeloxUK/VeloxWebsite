@@ -31,7 +31,7 @@ const Navbar = () => {
           className="flex items-center space-x-2"
           aria-label="LuxWatch Home"
         >
-          <span className="text-2xl font-serif font-bold gold-shimmer">LuxWatch</span>
+          <span className="text-2xl font-sans font-bold gold-shimmer">LuxWatch</span>
         </a>
 
         {/* Desktop Navigation */}
