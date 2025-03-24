@@ -14,7 +14,7 @@ const Footer = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <h2 id="footer-heading" className="sr-only">Footer</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Brand */}
           <div>
             <a href="/" className="inline-block mb-6" aria-label="LuxWatch Home">
@@ -34,30 +34,6 @@ const Footer = () => {
                 <Facebook size={20} aria-hidden="true" />
               </a>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-medium mb-6">Quick Links</h3>
-            <nav aria-label="Quick links navigation">
-              <ul className="space-y-3">
-                <li>
-                  <a href="/about" className="text-luxury-cream/70 hover:text-luxury-gold transition-colors">About Us</a>
-                </li>
-                <li>
-                  <a href="#features" className="text-luxury-cream/70 hover:text-luxury-gold transition-colors">How It Works</a>
-                </li>
-                <li>
-                  <a href="#benefits" className="text-luxury-cream/70 hover:text-luxury-gold transition-colors">For Dealers</a>
-                </li>
-                <li>
-                  <a href="/terms" className="text-luxury-cream/70 hover:text-luxury-gold transition-colors">Terms of Service</a>
-                </li>
-                <li>
-                  <a href="/privacy" className="text-luxury-cream/70 hover:text-luxury-gold transition-colors">Privacy Policy</a>
-                </li>
-              </ul>
-            </nav>
           </div>
 
           {/* Contact */}
