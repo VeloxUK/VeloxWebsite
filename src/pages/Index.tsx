@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
@@ -35,14 +36,24 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-luxury-black text-white overflow-x-hidden">
-      <Navbar />
-      <HeroSection />
-      <FeaturesSection />
-      <BrandsSection />
-      <CallToAction />
-      <Footer />
-    </div>
+    <>
+      <Helmet>
+        <title>LuxWatch - Premium Luxury Watch Rental Marketplace</title>
+        <meta name="description" content="Transform your idle luxury watches into revenue-generating assets. Join the premier marketplace connecting luxury watch dealers with discerning clients." />
+        <meta name="keywords" content="luxury watch rental, watch marketplace, watch dealers, timepieces rental" />
+        <link rel="canonical" href="https://luxwatch.com/" />
+      </Helmet>
+      <div className="min-h-screen bg-luxury-black text-white overflow-x-hidden">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <FeaturesSection />
+          <BrandsSection />
+          <CallToAction />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

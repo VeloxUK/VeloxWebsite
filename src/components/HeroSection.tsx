@@ -32,7 +32,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" aria-label="Hero section">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-luxury-black z-0">
         <div className="absolute top-0 left-0 right-0 h-1/4 bg-gradient-to-b from-luxury-gold/10 to-transparent"></div>
@@ -59,6 +59,7 @@ const HeroSection = () => {
               <a 
                 href="#register" 
                 className="bg-luxury-gold hover:bg-luxury-lightgold text-luxury-black px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center group"
+                aria-label="Register as a dealer"
               >
                 Register as Dealer
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -66,6 +67,7 @@ const HeroSection = () => {
               <a 
                 href="#learn-more" 
                 className="border border-luxury-gold/50 hover:border-luxury-gold text-luxury-white px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center"
+                aria-label="Learn more about our services"
               >
                 Learn More
               </a>
@@ -95,8 +97,12 @@ const HeroSection = () => {
                 <div className="aspect-square rounded-full bg-gradient-radial from-luxury-gold/20 to-transparent absolute inset-0 blur-xl"></div>
                 <img 
                   src="https://i.imgur.com/IMbrOCE.png" 
-                  alt="Luxury Watch" 
+                  alt="Luxury Gold Watch Showcase" 
                   className="w-full h-auto relative z-10 drop-shadow-[0_20px_50px_rgba(212,175,55,0.3)]"
+                  loading="eager"
+                  width="600"
+                  height="600"
+                  title="Premium Luxury Timepiece"
                 />
                 
                 {/* Floating Elements */}

@@ -36,7 +36,7 @@ const BrandsSection = () => {
   ];
 
   return (
-    <section id="brands" className="py-24 relative overflow-hidden">
+    <section id="brands" className="py-24 relative overflow-hidden" aria-labelledby="brands-heading">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-luxury-gold/30 to-transparent"></div>
@@ -46,7 +46,7 @@ const BrandsSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 id="brands-heading" className="text-3xl md:text-4xl font-bold mb-6">
             Prestigious <span className="gold-shimmer">Brands</span> on Our Platform
           </h2>
           <p className="text-luxury-cream/80 text-lg">
@@ -63,16 +63,20 @@ const BrandsSection = () => {
             >
               <img 
                 src={brand.logo} 
-                alt={brand.name} 
+                alt={`${brand.name} Logo`} 
+                title={`${brand.name} - Available on LuxWatch`}
                 className="max-h-16 max-w-full opacity-80 hover:opacity-100 transition-opacity" 
+                loading="lazy"
+                width="120"
+                height="60"
               />
             </div>
           ))}
         </div>
 
         {/* Testimonials */}
-        <div id="testimonials" className="mt-24">
-          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">
+        <div id="testimonials" className="mt-24" aria-labelledby="testimonials-heading">
+          <h3 id="testimonials-heading" className="text-2xl md:text-3xl font-bold mb-12 text-center">
             Success <span className="gold-shimmer">Stories</span> from Partners
           </h3>
 
@@ -81,9 +85,10 @@ const BrandsSection = () => {
               <div 
                 key={index} 
                 className="bg-luxury-darkgray border border-luxury-gold/10 rounded-lg p-8 elegant-hover relative"
+                aria-label={`Testimonial from ${testimonial.author}`}
               >
                 {/* Quote mark */}
-                <div className="absolute top-6 right-6 text-6xl text-luxury-gold/20 font-serif">"</div>
+                <div className="absolute top-6 right-6 text-6xl text-luxury-gold/20 font-serif" aria-hidden="true">"</div>
                 
                 <p className="text-luxury-cream/90 mb-8 relative z-10">{testimonial.quote}</p>
                 
@@ -93,6 +98,9 @@ const BrandsSection = () => {
                       src={testimonial.image} 
                       alt={testimonial.author} 
                       className="w-full h-full object-cover" 
+                      loading="lazy"
+                      width="48"
+                      height="48"
                     />
                   </div>
                   <div>
