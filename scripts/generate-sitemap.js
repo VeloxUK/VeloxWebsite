@@ -1,6 +1,6 @@
 
 /**
- * Sitemap Generator Script for LuxWatch
+ * Sitemap Generator Script for Velox
  * 
  * Usage: node generate-sitemap.js
  * This script generates a sitemap.xml file for the website.
@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const BASE_URL = 'https://luxwatch.com';
+const BASE_URL = 'https://velox.com';
 const DIST_PATH = path.join(__dirname, '../public/sitemap.xml');
 
 // Define site pages

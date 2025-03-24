@@ -7,9 +7,9 @@ const NotFound = () => {
   return (
     <>
       <SeoHead 
-        title="Page Not Found | LuxWatch" 
-        description="The page you are looking for does not exist. Return to the LuxWatch homepage."
-        canonicalUrl="https://luxwatch.com/404"
+        title="Page Not Found | Velox" 
+        description="The page you are looking for does not exist. Return to the Velox homepage."
+        canonicalUrl="https://velox.com/404"
       />
       <div className="min-h-screen bg-luxury-black text-white flex flex-col items-center justify-center p-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">

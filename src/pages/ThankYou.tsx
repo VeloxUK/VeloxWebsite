@@ -10,7 +10,7 @@ const ThankYou = () => {
   return (
     <>
       <Helmet>
-        <title>Thank You - LuxWatch</title>
+        <title>Thank You - Velox</title>
         <meta name="description" content="Thank you for joining our luxury watch dealer waitlist." />
         <meta name="robots" content="noindex" />
       </Helmet>

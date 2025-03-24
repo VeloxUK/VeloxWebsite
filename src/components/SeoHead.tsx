@@ -15,8 +15,8 @@ interface SeoHeadProps {
 const SeoHead = ({
   title,
   description,
-  canonicalUrl = 'https://luxwatch.com',
-  ogImageUrl = 'https://luxwatch.com/opengraph-image.png',
+  canonicalUrl = 'https://velox.com',
+  ogImageUrl = 'https://velox.com/opengraph-image.png',
   keywords = 'luxury watches, watch rental, premium timepieces',
   ogType = 'website',
   twitterCard = 'summary_large_image'

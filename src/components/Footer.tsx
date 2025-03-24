@@ -17,20 +17,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <a href="/" className="inline-block mb-6" aria-label="LuxWatch Home">
-              <span className="text-2xl font-sans font-bold gold-shimmer">LuxWatch</span>
+            <a href="/" className="inline-block mb-6" aria-label="Velox Home">
+              <span className="text-2xl font-sans font-bold gold-shimmer">Velox</span>
             </a>
             <p className="text-luxury-cream/70 mb-6">
               The premier marketplace for luxury watch rentals, connecting discerning enthusiasts with extraordinary timepieces.
             </p>
             <div className="flex space-x-4">
-              <a href="https://instagram.com/luxwatch" className="text-luxury-cream/60 hover:text-luxury-gold transition-colors" aria-label="Follow on Instagram">
+              <a href="https://instagram.com/velox" className="text-luxury-cream/60 hover:text-luxury-gold transition-colors" aria-label="Follow on Instagram">
                 <Instagram size={20} aria-hidden="true" />
               </a>
-              <a href="https://twitter.com/luxwatch" className="text-luxury-cream/60 hover:text-luxury-gold transition-colors" aria-label="Follow on Twitter">
+              <a href="https://twitter.com/velox" className="text-luxury-cream/60 hover:text-luxury-gold transition-colors" aria-label="Follow on Twitter">
                 <Twitter size={20} aria-hidden="true" />
               </a>
-              <a href="https://facebook.com/luxwatch" className="text-luxury-cream/60 hover:text-luxury-gold transition-colors" aria-label="Follow on Facebook">
+              <a href="https://facebook.com/velox" className="text-luxury-cream/60 hover:text-luxury-gold transition-colors" aria-label="Follow on Facebook">
                 <Facebook size={20} aria-hidden="true" />
               </a>
             </div>
@@ -43,7 +43,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <Mail className="w-5 h-5 text-luxury-gold mr-3 mt-0.5" aria-hidden="true" />
-                  <a href="mailto:contact@luxwatch.com" className="text-luxury-cream/70 hover:text-luxury-gold transition-colors">contact@luxwatch.com</a>
+                  <a href="mailto:contact@velox.com" className="text-luxury-cream/70 hover:text-luxury-gold transition-colors">contact@velox.com</a>
                 </li>
               </ul>
             </address>
@@ -53,7 +53,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-luxury-gold/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-luxury-cream/50 text-sm mb-4 md:mb-0">
-            © {currentYear} LuxWatch. All rights reserved.
+            © {currentYear} Velox. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="/terms" className="text-sm text-luxury-cream/50 hover:text-luxury-gold transition-colors">

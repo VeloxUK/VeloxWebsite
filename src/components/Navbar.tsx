@@ -29,9 +29,9 @@ const Navbar = () => {
         <a 
           href="/" 
           className="flex items-center space-x-2"
-          aria-label="LuxWatch Home"
+          aria-label="Velox Home"
         >
-          <span className="text-2xl font-sans font-bold gold-shimmer">LuxWatch</span>
+          <span className="text-2xl font-sans font-bold gold-shimmer">Velox</span>
         </a>
 
         {/* Desktop Navigation */}

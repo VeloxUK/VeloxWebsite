@@ -36,10 +36,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>LuxWatch - Join Our Exclusive Dealer Waitlist</title>
+        <title>Velox - Join Our Exclusive Dealer Waitlist</title>
         <meta name="description" content="Join our waitlist for luxury watch dealers. Monetize your watch inventory and connect with discerning clients on our premium rental marketplace." />
         <meta name="keywords" content="luxury watch rental, watch marketplace, dealer waitlist, timepieces rental" />
-        <link rel="canonical" href="https://luxwatch.com/" />
+        <link rel="canonical" href="https://velox.com/" />
       </Helmet>
       <div className="min-h-screen bg-luxury-black text-white overflow-x-hidden">
         <Navbar />
