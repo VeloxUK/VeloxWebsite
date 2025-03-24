@@ -70,14 +70,15 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" aria-label="Hero section" id="register">
-      {/* Background Image and Overlay */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        {/* Background Image */}
-        <div className="absolute inset-0 bg-luxury-black">
-          <div className="absolute inset-0 opacity-40 bg-gradient-to-b from-luxury-black via-luxury-black/90 to-luxury-black"></div>
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat mix-blend-overlay opacity-75" 
-               style={{ backgroundImage: "url('/lovable-uploads/7cce071e-9b08-4779-a448-26a1ba3b075d.png')" }}></div>
-        </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+          style={{ backgroundImage: "url('/lovable-uploads/7cce071e-9b08-4779-a448-26a1ba3b075d.png')" }}
+        ></div>
+        
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-luxury-black opacity-75"></div>
         
         {/* Additional Effects */}
         <div className="absolute top-0 left-0 right-0 h-1/4 bg-gradient-to-b from-luxury-gold/5 to-transparent"></div>
