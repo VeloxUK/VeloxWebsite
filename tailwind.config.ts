@@ -71,8 +71,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Lato", "system-ui", "sans-serif"], // changed from Montserrat to Lato
-        serif: ["Cormorant Garamond", "Georgia", "serif"], // changed from Playfair Display to Cormorant Garamond
+        sans: ["ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+        serif: ["Cormorant Garamond", "Georgia", "serif"],
       },
       keyframes: {
         "accordion-down": {
