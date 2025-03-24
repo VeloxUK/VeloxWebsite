@@ -3,7 +3,7 @@ import React from 'react';
 import BenefitsList from './BenefitsList';
 
 interface CallToActionContentProps {
-  title: string;
+  title: React.ReactNode;
   subtitle: string;
   benefits: string[];
 }
