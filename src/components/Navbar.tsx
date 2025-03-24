@@ -37,9 +37,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#features" className="text-luxury-white hover:text-luxury-gold transition-colors">How It Works</a>
-          <a href="#brands" className="text-luxury-white hover:text-luxury-gold transition-colors">Brands</a>
           <a href="#benefits" className="text-luxury-white hover:text-luxury-gold transition-colors">For Dealers</a>
-          <a href="#testimonials" className="text-luxury-white hover:text-luxury-gold transition-colors">Testimonials</a>
         </div>
 
         {/* CTA Button */}
@@ -80,25 +78,11 @@ const Navbar = () => {
               How It Works
             </a>
             <a 
-              href="#brands" 
-              className="text-luxury-white hover:text-luxury-gold transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Brands
-            </a>
-            <a 
               href="#benefits" 
               className="text-luxury-white hover:text-luxury-gold transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               For Dealers
-            </a>
-            <a 
-              href="#testimonials" 
-              className="text-luxury-white hover:text-luxury-gold transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Testimonials
             </a>
             <a 
               href="#register" 
