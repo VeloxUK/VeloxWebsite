@@ -6,7 +6,7 @@ const HeroBackground = () => {
     <div className="absolute inset-0 z-0">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: "url('/background.jpeg')" }}
+        style={{ backgroundImage: "url('background.jpeg')" }}
       ></div>
       
       {/* Overlay to ensure text readability */}

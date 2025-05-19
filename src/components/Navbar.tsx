@@ -36,19 +36,8 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-luxury-white hover:text-luxury-gold transition-colors">How It Works</a>
-          <a href="#benefits" className="text-luxury-white hover:text-luxury-gold transition-colors">For Dealers</a>
-        </div>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <a 
-            href="#register" 
-            className="bg-luxury-gold text-luxury-black px-6 py-2 rounded-md font-medium hover:bg-luxury-lightgold transition-colors"
-            aria-label="Register as a dealer"
-          >
-            Register as Dealer
-          </a>
+          <a href="#features" className="bg-luxury-gold text-luxury-black px-6 py-2 rounded-md font-medium hover:bg-luxury-lightgold transition-colors">How It Works</a>
+          <a href="#benefits" className="bg-luxury-gold text-luxury-black px-6 py-2 rounded-md font-medium hover:bg-luxury-lightgold transition-colors">For Dealers</a>
         </div>
 
         {/* Mobile Menu Button */}
