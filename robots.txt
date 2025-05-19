@@ -1,0 +1,25 @@
+
+# www.robotstxt.org
+
+User-agent: *
+Allow: /
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://velox.com/sitemap.xml
+
+# Specific crawler rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
